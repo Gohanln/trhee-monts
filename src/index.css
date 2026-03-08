@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --pink: #FFB6C1;
+  --deep-pink: #FF77AA;
+  --sunny: #FFE066;
+}
+
+html,body,#root{height:100%;}
+body{
+  /* Fallback plain CSS gradient in case Tailwind isn't processed */
+  background: linear-gradient(135deg, #fda4af 0%, #a78bfa 50%, #4f46e5 100%);
+  @apply bg-gradient-to-br from-pink-300 via-purple-400 to-indigo-700;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.decorative{
+  font-family: 'Dancing Script', cursive;
+}
+
+.card{
+  @apply bg-white/70 backdrop-blur rounded-3xl p-8 shadow-xl max-w-3xl mx-auto;
+}
+
+.btn{
+  @apply px-4 py-2 rounded-full font-medium shadow-sm;
+}
+
+.heart{
+  filter: drop-shadow(0 6px 12px rgba(255,100,150,0.15));
+}
